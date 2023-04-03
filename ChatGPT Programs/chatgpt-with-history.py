@@ -9,26 +9,31 @@ def main():
     behavior = input(f"Hi {user_name}, enter the style you want ChatGPT to behave in: ")
 
     user_question = input(f"{user_name}: ")
+    
+    messages = [
+            {"role": "system", "content": behavior}
+        ]
+    
+    messages.append({"role": "user", "content": user_question})
 
     answer = openai.ChatCompletion.create(
 
         model = "gpt-3.5-turbo",
 
-        messages = [
-            {"role": "system", "content": behavior},
-            {"role": "user", "content": user_question}
-        ]
+        messages = messages
     )
 
     message_body = answer.choices[0].message.content
 
     print(f"ChatGPT: {message_body}")
+    
+    {"role": "assistant", "content": message_body}
 
 while True:
 
     main()
 
-    repeat = input("Do you want to ask another quesation to ChatGPT (y/n)?")
+    repeat = input("Do you want to ask another question to ChatGPT (y/n)?")
 
     if repeat != "Y" or repeat != "y":
 
