@@ -16,7 +16,7 @@ def main():
 
         messages = [
             {"role": "system", "content": behavior},
-            {"role": "assistant", "content": user_question}
+            {"role": "user", "content": user_question}
         ]
     )
 
