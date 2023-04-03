@@ -30,10 +30,6 @@ while True:
 
     repeat = input("Do you want to ask another quesation to ChatGPT (y/n)?")
 
-    if repeat == "Y" or repeat == "y":
-
-        main()
-
-    elif repeat == "n" or repeat == "N":
+    if repeat != "Y" or repeat != "y":
 
         break
