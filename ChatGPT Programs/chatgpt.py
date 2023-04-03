@@ -28,7 +28,7 @@ while True:
 
     main()
 
-    repeat = input("Do you want to ask another quesation to ChatGPT (y/n)?")
+    repeat = input("Do you want to ask another question to ChatGPT (y/n)?")
 
     if repeat != "Y" or repeat != "y":
 
