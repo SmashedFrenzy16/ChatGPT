@@ -37,5 +37,3 @@ while True:
     elif repeat == "n" or repeat == "N":
 
         break
-
-    pass
