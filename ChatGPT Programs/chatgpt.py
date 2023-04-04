@@ -8,7 +8,7 @@ def main():
 
     behavior = input(f"Hi {user_name}, enter the style you want ChatGPT to behave in: ")
 
-    user_question = input(f"{user_name}: ")
+    user_question = input(f"{user_name}, enter a question for ChatGPT to answer: ")
 
     answer = openai.ChatCompletion.create(
 
